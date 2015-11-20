@@ -229,7 +229,7 @@ ul.alert-dropdown {
 .form-signin
 {
     max-width: 330px;
-    padding: 15px;
+    padding: 10px;
     margin: 0 auto;
 }
 .form-signin .form-signin-heading, .form-signin .checkbox
@@ -276,7 +276,7 @@ ul.alert-dropdown {
     font-size: 18px;
     font-weight: 400;
     display: block;
-    margin-top: 10%;
+    margin-top: 5%;
 }
 .profile-img
 {
