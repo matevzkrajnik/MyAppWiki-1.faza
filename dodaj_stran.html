@@ -18,9 +18,6 @@
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
 
-    <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
-
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
@@ -36,12 +33,14 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/moj.js"></script>
 
 </head>
 
-
 <body>
+
 <div id="wrapper">
+
     <!-- Navigation -->
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
@@ -151,66 +150,48 @@
     </nav>
 
     <div id="page-wrapper">
+
         <div class="container-fluid">
-            <div class="page-header">
-                <h1>MyApp Spletna Storitev</h1>
-            </div>
-            <div class="row" style="padding: 1%">
-                <img align="left" class="img-thumbnail col-lg-4 col-xs-12 col-md-5" src="http://placehold.it/600x400"
-                     alt="grafika MyApp spletna storitev">
-                <div class="col-lg-8 col-xs-12 col-md-7">
-                    <div>
-                        <h5><b>O storitvi</b></h5>
-
-                        <p>Spletna storitev MyApp omogoča uporabnikom, da svojo aplikacijo objavijo na naš portal,
-                            kjer lahko spremljajo
-                            uporabno statistiko:
-                        <ul style="list-style-type: circle">
-                            <li>število prenosov (neodvisno od platforme: Android, iOS, Windows Phone),</li>
-                            <li>število obstoječih uporabnikov,</li>
-                            <li>razne lastnosti svojih uporabnikov:
-                                <ul style="list-style-type: square">
-                                    <li>pogostost uporabe,</li>
-                                    <li>tip naprave,</li>
-                                    <li>država,</li>
-                                    <li>itd.</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        S tem pridobijo ogromno, saj spoznajo svoje uporabnike, ugotovijo, kaj je uporabnikom všeč,
-                        kaj ne, ...
-                        S temi podatki lahko razvijajo aplikacije, ki bodo dosegle večje število uporabnikov in jih
-                        bodo uporabniki radi uporabljali.
-                        </p>
+            <div class="row">
+                <div class="col-lg-11">
+                    <div class="page-header">
+                        <h1>Dodajanje strani</h1>
                     </div>
-                </div>
-            </div>
-            <hr style="border:solid 1px; color: #268090">
-            <div class="row" style="padding: 1%">
-                <img class="col-lg-2 col-xs-6 col-md-5" align="left" src="moja_slika.jpg" alt="Rajmunda Osterc">
-                <div class="col-lg-6 col-xs-12 col-md-7">
                     <div class="row">
-                        <h5><b>O razvijalcu</b></h5>
+                        <div class="col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                            <label for="naslov">Naslov: </label>
+                            <input type="text" name="naslov" id="naslov" class="naslov form-control">
+                        </div>
 
-                        <div>
-                            <p>Rajmund Osterc je svojo razvijalsko pot začel že v srednji
-                                šoli, ko se je prvič srečal z računalniškimi programi.
-                                Sprva so ga zanimale igrice, tudi kasneje se je ukvarjal z oblikovanjem in
-                                multimedijo. S porastom mobilnih
-                                naprav pa se je osredotočil na razvijanje v tem segmentu, kamor največ svojega časa
-                                vloži še danes.</p>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-lg-1">
+                            <label for="vsebina">Vsebina: </label>
                         </div>
                     </div>
                     <div class="row">
-                        <div>
-                            <h5><b>Kontakt</b></h5>
-
-                            <p>E-mail: info@myapp.com<br></p>
+                        <div class="col-lg-10 col-md-10">
+                            <textarea class="naslov col-lg-12 col-md-12 col-sm-12 col-xs-12" rows=20 id="vsebina" style="border-radius: 4px; resize: none">
+                            </textarea>
                         </div>
                     </div>
+                    <button type="button" class="btn btn-primary" onclick="location.href='splosno.html'">Shrani</button>
                 </div>
+                <div class="col-lg-1"></div>
             </div>
+
         </div>
+
+        <!-- /.container-fluid -->
+
     </div>
+    <!-- /#page-wrapper -->
+
 </div>
+<!-- /#wrapper -->
+
+
 </body>
+
+

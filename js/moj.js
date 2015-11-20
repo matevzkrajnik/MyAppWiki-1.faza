@@ -45,6 +45,15 @@ function preveriRegistracijo() {
     return false;
 }
 
+function zapolni() {
+    document.getElementById("naslov").value = "Splošno";
+    document.getElementById("vsebina").value = "MyApp spletna storitev uporablja najnovejše tehnologije, da uporabnikom omogoči " +
+        "vpogled v statistiko njihovih aplikacij. S povezavo do Google Play Store, iTunes App Store ter Windows Phone Apps naša storitev " +
+        "dobi vse potrebne informacije ter jih predstavi na uporabniku prijazen način. Tako lahko tudi vsak začetnik razvijalec vidi, kako pogosto " +
+        "uporabniki uporabljajo njegovo aplikacijo, kako dolgo jo imajo odprto, na katerih napravah jo uporabljajo, ... Te informacije so za vsakega " +
+        "razvijalca pomembne, saj lahko na podlagi statistike uporabe svojo aplikacijo prilagodi za kar največjo uspešnost."
+}
+
 $(document).ready(function(){
 
 });

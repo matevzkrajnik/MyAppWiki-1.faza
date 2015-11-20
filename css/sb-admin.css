@@ -8,7 +8,7 @@
 
 body {
     margin-top: 70px;
-    background-color: #222;
+    background-color: #fff;
 }
 
 @media(min-width:768px) {
@@ -306,4 +306,18 @@ ul.alert-dropdown {
 
 .title-login {
     color: #286090;
+}
+
+.naslov {
+    margin-bottom: 20px;
+}
+
+.slika-profila {
+    padding: 2px;
+    border: 2px solid #286090;
+    margin-bottom: 10px;
+}
+
+.lastnosti {
+    margin-top: 0px;
 }
