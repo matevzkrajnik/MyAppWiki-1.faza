@@ -2,11 +2,13 @@ function preveriPrijavo() {
     document.getElementById("napakamail").style.visibility = "hidden";
     if (document.getElementById("vnosemail").value == "") {
         console.log("prazen email input");
+        $("vnosemail").setCustomValidity("sam da dela");
         document.getElementById("napakamail").style.visibility = "visible";
         return false;
     }
     else if (document.getElementById("vnosgeslo").value == "") {
         console.log("prazen geslo input");
+        $("vnosgeslo").setCustomValidity("sam da dela");
         document.getElementById("napakamail").style.visibility = "visible";
         return false;
     }
