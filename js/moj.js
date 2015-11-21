@@ -14,6 +14,7 @@ function preveriPrijavo() {
     }
     else {
         var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        console.log("kaaaj")
         if(regex.test(document.getElementById("vnosemail").value)){
             return true;
         }
