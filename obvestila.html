@@ -33,7 +33,6 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/moj.js"></script>
 
 </head>
 
@@ -142,7 +141,7 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="index.html"><i class="fa fa-plus-square"></i> Dodaj stran</a>
+                    <a href="dodaj_stran.html"><i class="fa fa-plus-square"></i> Dodaj stran</a>
                 </li>
             </ul>
         </div>
@@ -153,51 +152,14 @@
 
         <div class="container-fluid">
             <div class="row">
-                <div class="page-header">
-                    <h1>Ustvari račun</h1>
-                </div>
-                <div class="col-lg-1 col-md-1 col-sm-1"></div>
-                <form role="form" class="col-lg-4 col-md-6 col-sm-5" method=post action="index.html">
-                    <h3>Vnesi podatke</h3>
-                    <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input id="ime" type="text" class="form-control" placeholder="Ime"
-                               oninvalid="setCustomValidity('To polje ne sme biti prazno.')" oninput="setCustomValidity('')">
+                <div class="col-lg-11">
+                    <div class="page-header">
+                        <h1>Obvestila</h1>
                     </div>
 
-                    <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                        <input id="priimek" type="text" class="form-control" placeholder="Priimek">
-                    </div>
-
-                    <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                        <input id="mail" type="text" class="form-control" placeholder="E-mail">
-                    </div>
-
-                    <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input id="geslo1" type="password" class="form-control" placeholder="Geslo">
-                    </div>
-
-                    <div class="form-group input-group">
-                        <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                        <input id="geslo2" type="password" class="form-control" placeholder="Ponovite geslo">
-                    </div>
-                    <div class="form-group input-group">
-                        <input type="submit" onclick="return preveriRegistracijo()" class="btn btn-primary" value="Registriraj se">
-                        <div id="napaka" style="visibility: hidden;" href="#"><span class="label label-danger">Napaka v podatkih</span></div>
-                    </div>
-                </form>
-                <div class="col-lg-1"></div>
-                <div class="col-lg-6 col-md-4 col-sm-6">
-                    <h3>Že imaš račun?</h3>
-                    <button type="button" class="btn btn-primary" onclick="location.href='login.html'">Prijavi se</button>
                 </div>
             </div>
-
         </div>
-
         <!-- /.container-fluid -->
 
     </div>
