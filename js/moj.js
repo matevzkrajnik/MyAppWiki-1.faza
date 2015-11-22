@@ -78,5 +78,61 @@ function zapolni() {
 }
 
 $(document).ready(function () {
+    $("#ponovi").hide();
+    $("#shrani").hide();
+    $("#shranjujem").hide();
+    
+    if ($("#prostor").length) {
 
+        var canvas = $("#prostor").get(0);
+        var context = canvas.getContext("2d");
+        var video = document.getElementById("video");
+        var videoObj = { "video": true };
+
+        var errBack = function(error) {
+            console.log("Video capture error: ", error.code);
+        };
+
+        if (navigator.getUserMedia) { // Standard
+            navigator.getUserMedia(videoObj, function(stream) {
+                video.src = stream;
+                video.play();
+                $("#slikaj").show();
+            }, errBack);
+        } else if (navigator.webkitGetUserMedia) {  // WebKit-prefixed
+            navigator.webkitGetUserMedia(videoObj, function(stream){
+                video.src = window.webkitURL.createObjectURL(stream);
+                video.play();
+                $("#slikaj").show();
+            }, errBack);
+        } else if (navigator.mozGetUserMedia) { // moz-prefixed
+            navigator.mozGetUserMedia(videoObj, function(stream){
+                video.src = window.URL.createObjectURL(stream);
+                video.play();
+                $("#slikaj").show();
+            }, errBack);
+        }
+
+        $("#slikaj").get(0).addEventListener("click", function() {
+            context.drawImage(video, 0, 0, 640, 480);
+            $("#video").hide();
+            $("#prostor").show();
+            $("#slikaj").hide();
+            $("#ponovi").show();
+            $("#shrani").show();
+        });
+
+        $("#ponovi").get(0).addEventListener("click", function() {
+            $("#video").show();
+            $("#prostor").hide();
+            $("#slikaj").show();
+            $("#ponovi").hide();
+            $("#shrani").hide();
+        });
+
+        $("#shrani").get(0).addEventListener("click", function(){
+            $("#shranjujem").show();
+            history.go(-1);
+        });
+    }
 });

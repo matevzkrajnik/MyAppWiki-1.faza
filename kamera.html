@@ -154,10 +154,25 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-11">
-                    <div class="page-header">
-                        <h1>Zajem slike</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h1 class="page-header">
+                                Zajem slike
+                            </h1>
+                        </div>
                     </div>
-
+                    <div class="row">
+                        <div class="col-lg-6 col-md-10 col-sm-8 col-xs-8">
+                            <video id="video" autoplay></video>
+                            <canvas id="prostor" width="640" height="480"></canvas>
+                        </div>
+                        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                            <button class="btn btn-primary capture" id="slikaj">  Slikaj </button>
+                            <button class="btn btn-primary capture" id="ponovi" style="margin-bottom: 3px">  Ponovi  </button>
+                            <button class="btn btn-info capture" id="shrani"> Shrani </button>
+                            <br> <span class="capture" id="shranjujem"> Shranjujem... </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
