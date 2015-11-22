@@ -48,6 +48,15 @@ function preveriRegistracijo() {
     return false;
 }
 
+function pokazi(){
+    console.log("radi");
+    document.getElementById("sporocilo").style.visibility = "visible";
+}
+
+function skrij(){
+    document.getElementById("sporocilo").style.visibility = "hidden";
+}
+
 function zapolni() {
     document.getElementById("naslov").value = "Splošno";
     document.getElementById("vsebina").value = "MyApp spletna storitev uporablja najnovejše tehnologije, da uporabnikom omogoči " +
