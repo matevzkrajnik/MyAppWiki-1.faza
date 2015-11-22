@@ -15,10 +15,10 @@ function preveriPrijavo() {
     else {
         var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
         console.log("kaaaj")
-        if(regex.test(document.getElementById("vnosemail").value)){
+        if (regex.test(document.getElementById("vnosemail").value)) {
             return true;
         }
-        else{
+        else {
             console.log("Napačen format email-a");
             document.getElementById("napakamail").style.visibility = "visible";
             return false;
@@ -35,11 +35,11 @@ function preveriRegistracijo() {
     var mail = document.getElementById("mail").value;
     var geslo1 = document.getElementById("geslo1").value;
     var geslo2 = document.getElementById("geslo2").value;
-    var regexIme =  /[A-Za-z]+/i;
+    var regexIme = /[A-Za-z]+/i;
     var regexMail = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
     var mailKul = regexMail.test(mail);
     //console.log(regexIme.test(ime));
-    if(ime == "" || priimek == "" || !mailKul || geslo1 == "" || geslo2 == "" || geslo1 != geslo2){
+    if (ime == "" || priimek == "" || !mailKul || geslo1 == "" || geslo2 == "" || geslo1 != geslo2) {
         document.getElementById("napaka").style.visibility = "visible";
     }
     else {
@@ -48,12 +48,23 @@ function preveriRegistracijo() {
     return false;
 }
 
-function pokazi(){
-    console.log("radi");
+function pokazi(vrstica) {
     document.getElementById("sporocilo").style.visibility = "visible";
+    var dogodek = vrstica.getElementsByTagName('td')[0].innerHTML;
+    var stran = vrstica.getElementsByTagName('td')[1].innerHTML;
+    var string = "<p><b>";
+    var avtor = vrstica.getElementsByTagName('td')[2].innerHTML;
+    if(dogodek === "Sprememba strani"){
+        string += "Spremenil sem vsebino strani <i>" + stran;
+    }
+    else if (dogodek === "Dodana stran"){
+        string += "Dodal sem stran z naslovom <i>" + stran;
+    }
+    string += "</i>.</b><br>Lep pozdrav,  " + avtor + "</p>";
+    document.getElementById("sporocilo").innerHTML = string;
 }
 
-function skrij(){
+function skrij() {
     document.getElementById("sporocilo").style.visibility = "hidden";
 }
 
@@ -66,6 +77,6 @@ function zapolni() {
         "razvijalca pomembne, saj lahko na podlagi statistike uporabe svojo aplikacijo prilagodi za kar največjo uspešnost."
 }
 
-$(document).ready(function(){
+$(document).ready(function () {
 
 });
