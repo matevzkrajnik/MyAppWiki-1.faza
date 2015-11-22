@@ -81,7 +81,7 @@ $(document).ready(function () {
     $("#ponovi").hide();
     $("#shrani").hide();
     $("#shranjujem").hide();
-    
+
     if ($("#prostor").length) {
 
         var canvas = $("#prostor").get(0);
